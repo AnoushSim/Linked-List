@@ -7,8 +7,9 @@ int main() {
         l_list.insert(2);
         l_list.insert(3);
       	l_list.insert_at(2, 4);
-      	 int position = l_list.find(4);
+      	int position = l_list.find(4);
+	std::cout << position <<std::endl;
       	l_list.remove_(3);
-	      l_list.showList();
+	l_list.showList();
       	return 0;
 }
