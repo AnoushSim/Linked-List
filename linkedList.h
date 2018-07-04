@@ -36,7 +36,7 @@ void LinkedList<T>::insert (T element) {
   Node<T>* node = new Node<T>();
   node->item = element;
   node->next = _head;
-  _head->next = node;
+  _head = node;
 }
 
 template <typename T>
@@ -47,7 +47,7 @@ void LinkedList<T>::insert_at (int pos,T element) {
   
   _cur = _head;
   if(_head != nullptr) {
-    for(int ix = 0;  ix < pos; ++ix) {
+    for(int ix = 0;  ix < pos-1; ++ix) {
    
       _prev=_cur;
       _cur=_cur->next;
@@ -65,7 +65,7 @@ void LinkedList<T>::remove_(int pos) {
   
   _cur = _head;
   if(_head != nullptr) {
-   for (int ix = 0; ix < pos; ++ix) {
+   for (int ix = 0; ix < pos-1; ++ix) {
      _prev = _cur;
      _cur = _cur->next;
   } 
